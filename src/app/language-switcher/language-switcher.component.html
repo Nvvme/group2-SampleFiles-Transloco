@@ -4,9 +4,14 @@
 <!-- Each option is given a value of the language code and displays the translated name of the language. -->
 <!-- The currently selected language is set using the value attribute. -->
 <!-- When the user selects a new language, the onChange function is called with the event as an argument. -->
-<ng-container *transloco="let t">
-  <label for="lang">{{ t('choose_language') }}:</label>
-  <select (change)="onChange($event)" id="lang" [value]="currentLang">
-    <option *ngFor="let lang of langs" [value]="lang">{{ t(lang) }}</option>
-  </select>
-</ng-container>
+<!-- Step 2b: Language Switcher Template
+     This template provides a language selection dropdown-->
+<!--
+     <ng-container *transloco="let t">
+      <label for="lang">{{ t('choose_language') }}:</label>
+      <select (change)="onChange($event)" id="lang" [value]="currentLang">
+        <option *ngFor="let lang of langs" [value]="lang">{{ t(lang) }}</option>
+      </select>
+    </ng-container>
+-->
+

@@ -5,27 +5,35 @@ import { NgFor } from "@angular/common";
 @Component({
   selector: "app-language-switcher",
   standalone: true,
-  imports: [NgFor, TranslocoDirective],
+  /* imports: [NgFor, TranslocoDirective],*/
   templateUrl: `./language-switcher.component.html`
 })
 export class LanguageSwitcherComponent {
-  currentLang: string; // stores the current language
-  langs: string[]; // stores the available languages
+  // currentLang stores the active language
+
+  /*
+  currentLang: string;
+  // langs stores the available languages
+  langs: string[];
+  */
 
   constructor(private translocoService: TranslocoService) {
-    this.currentLang = this.translocoService.getActiveLang();
-    // get all available languages
+    // Step 2c.1: Initialize the current language.
+    /* this.currentLang = this.translocoService.getActiveLang(); */
+
+    // Step 2c.2: Retrieve available languages.
+    /*
     const availableLangs = this.translocoService.getAvailableLangs();
-    // check if langs are provided as string or object
     if (Array.isArray(availableLangs) && typeof availableLangs[0] === "string") {
       this.langs = availableLangs as string[];
     } else {
       this.langs = (availableLangs as { id: string; label: string }[]).map(lang => lang.id);
     }
+    */
   }
   
-  // on change event get HTML select element value and set active lang
+  // Step 2c.3: onChange event handler for the language select element.
   onChange(event: Event): void {
-    this.translocoService.setActiveLang((event.target as HTMLSelectElement).value);
+  /* this.translocoService.setActiveLang((event.target as HTMLSelectElement).value);*/
   }
 }
