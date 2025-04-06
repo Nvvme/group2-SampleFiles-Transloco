@@ -18,10 +18,10 @@ export class LanguageSwitcherComponent {
   */
 
   constructor(private translocoService: TranslocoService) {
-    // Step 2c.1: Initialize the current language.
+    // Step 2d.1: Initialize the current language.
     /* this.currentLang = this.translocoService.getActiveLang(); */
 
-    // Step 2c.2: Retrieve available languages.
+    // Step 2d.2: Retrieve available languages.
     /*
     const availableLangs = this.translocoService.getAvailableLangs();
     if (Array.isArray(availableLangs) && typeof availableLangs[0] === "string") {
@@ -32,7 +32,7 @@ export class LanguageSwitcherComponent {
     */
   }
   
-  // Step 2c.3: onChange event handler for the language select element.
+  // Step 2d.3: onChange event handler for the language select element.
   onChange(event: Event): void {
   /* this.translocoService.setActiveLang((event.target as HTMLSelectElement).value);*/
   }
